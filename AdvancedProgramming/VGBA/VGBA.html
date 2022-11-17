@@ -1,0 +1,1287 @@
+<HTML>
+<HEAD>
+<TITLE>Virtual GameBoy Advance Documentation</TITLE>
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF LINK=#006000 VLINK=#006000>
+
+<CENTER>
+<H1><FONT COLOR=#FF0000>
+Virtual GameBoy Advance<BR>version 6.4
+</FONT></H1>
+<H3>by <A HREF="http://fms.komkon.org/">Marat Fayzullin</A></H3>
+</CENTER>
+<P>
+
+<CENTER><H1>Contents</H1></CENTER>
+<UL>
+<LI><A HREF="#LABA">Disclaimers</A>
+<LI><A HREF="#LABB">New in This Version</A>
+<LI><A HREF="#LABD">Introduction</A>
+<LI><A HREF="#LABE">VGBA Ports</A>
+<LI><A HREF="#LABG">What is Included</A>
+<LI><A HREF="#LABH">What is not Included</A>
+<LI><A HREF="#LABI">Buttons</A>
+<LI><A HREF="#LABJ">Command Line Options</A>
+<LI><A HREF="#LABK">Frequently Asked Questions</A>
+<LI><A HREF="#LABC">History</A>
+<LI><A HREF="#LABM">Thanks</A>
+</UL>
+
+<A NAME="LABA">
+<CENTER><H1>Disclaimers</H1></CENTER>
+</A>
+<UL>
+<LI><I>GameBoy and GameBoy Advance</I> are registered trademarks of Nintendo.
+<LI>The author is in no way affiliated with Nintendo.
+<LI>The author is in no way affiliated with any pirate group out there.
+<LI>The author <U>cannot</U> and <U>will not</U> provide you with
+    any GameBoy or GameBoy Advance games.
+<LI>The author cannot be held responsible for anything this program
+    will do to your computer, brains, free time, housemates, pets, or
+    family members.
+</UL>
+
+<A NAME="LABB">
+<CENTER><H1>New in This Version</H1></CENTER>
+</A>
+<UL>
+<LI>Fixed audio randomly not working on VGBA-Windows startup.
+<LI>Added <I>"Video | Show Framerate"</I> menu option to VGBA-Windows.
+<LI>Most command line options should now work in VGBA-Windows.
+<LI>Increased synchronization timer precision in VGBA-Windows.
+<LI>Added <CODE>-fps</CODE> command line option to VGBA-Linux.
+</UL>
+
+<A NAME="LABD">
+<CENTER><H1>Introduction</H1></CENTER>
+</A>
+<P>
+<I>Virtual GameBoy Advance (VGBA)</I> emulates Nintendo's GameBoy
+Advance handheld videogame console. VGBA can run most commercial GameBoy
+Advance software on a desktop, palmtop, or any sufficiently fast computing
+device. It will also run <U>correctly written</U> homebrewn software. You
+can always get the latest version of VGBA at
+</P>
+
+<CENTER>
+<A HREF="http://fms.komkon.org/VGBA/">
+http://fms.komkon.org/VGBA/
+</A>
+</CENTER>
+
+<P>
+VGBA is a logical continuation of my previous work in videogame
+emulation, namely, the
+<I><A HREF="http://fms.komkon.org/VGB/">Virtual GameBoy (VGB)</A></I>.
+VGB emulates GameBoy Classic, GameBoy Pocket, Super GameBoy, and
+GameBoy Color. VGBA is a completely different program though. It will
+not run the original GameBoy software, so you will have to use VGB for
+that.
+</P>
+
+<A NAME="LABE">
+<CENTER><H1>VGBA Ports</H1></CENTER>
+</A>
+<P>
+Because VGBA is a very portable program, it can be compiled on many
+different platforms: Windows, Unix, Linux, Android, MacOS, MSDOS, etc.
+The complete up-to-date list of VGBA ports can be found at the VGBA
+homepage. Following are just the major VGBA ports: 
+</P>
+<DL>
+
+<A NAME="VGBA-Android">
+<DT><H2>VGBA-Android</H2>
+</A>
+<DD>
+<P>
+The Android version of VGBA are available from Google Play:
+</P>
+<CENTER>
+<A HREF="https://play.google.com/store/apps/details?id=com.fms.vgba2">
+https://play.google.com/store/apps/details?id=com.fms.vgba2
+</A>
+</CENTER>
+<P>
+Once you download a copy, you should be able to use it on as many Android
+devices as you own, as long as they are all linked to the same Google Play
+account. Make sure to enable automatic updates, as VGBA-Android updates
+often. The Android version comes with many additional features, such as
+<I>Cheatopedia</I> with cheat codes for many popular games, <I>State
+Exchange</I> letting VGBA users exchange saved games, the <I>Box Art
+Downloader</I>, improved <I>Network Play</I> functionality, and more.
+</P>
+
+<A NAME="VGBA-Windows">
+<DT><H2>VGBA-Windows</H2>
+</A>
+<DD>
+<P>
+The VGBA-Windows is now free for everyone to use and share. It can be
+downloaded from the VGBA homepage:
+</P>
+<CENTER>
+<A HREF="http://fms.komkon.org/VGBA/">
+http://fms.komkon.org/VGBA/
+</A>
+</CENTER>
+<P>
+For more information, take a look at my other products for Windows:
+</P>
+<CENTER>
+<A HREF="http://fms.komkon.org/EmuWindows/">
+http://fms.komkon.org/EmuWindows/
+</A>
+</CENTER>
+<P>
+As I have made VGBA-Windows free, it is no being sold via eSellerate.
+Existing users should go to the above site and download a fresh copy.
+If you wish to support my work on VGBA-Windows and other emulators,
+please consider buying
+<A HREF="https://play.google.com/store/apps/details?id=com.fms.vgba2">VGBA-Android</A>.
+</P>
+
+<DT><H2>VGBA-Unix and VGBA-Linux</H2>
+<DD>
+<P>
+VGBA-Unix and VGBA-Linux are available freely in binary form from the VGBA
+homepage:
+</P>
+<CENTER>
+<A HREF="http://fms.komkon.org/VGBA/">
+http://fms.komkon.org/VGBA/
+</A>
+</CENTER>
+<P>
+I am always trying to compile it on as many different Unix and Linux
+flavors as I have handy at the moment.
+</P>
+
+<DT><H2>VGBA-Maemo and VGBA-Meego</H2>
+<DD>
+<P>
+The VGBA-Maemo works on Nokia devices running Maemo or Meego OS. It is
+specifically optimized for Maemo platform and available for free from
+respective package repositories and VGBA homepage. As both Maemo and
+Meego platforms are dead, I am no longer developing for them though.
+</P>
+
+<DT><H2>VGBA-MSDOS</H2>
+<DD>
+<P>
+I am no longer developing and supporting VGBA-MSDOS, as the MSDOS platform
+is completely dead nowadays. Older VGBA-MSDOS versions were sold as part
+of the <A HREF="#VGBA-Windows">VGBA-Windows package</A> (now free) and
+used <I>DOS4GW</I> extender and <I>VESA</I> screen drivers on MSDOS
+and Windows platforms.
+</P>
+
+<DT><H2>VGBA-Symbian</H2>
+<DD>
+<P>
+The VGBA-Symbian port ran on phones running the 3rd Edition of the Nokia
+S60 software. It is no longer being developed and supported, as Symbian
+and all its development tools are dead. You can still access some of my
+Symbian products at this address though:
+</P>
+<CENTER>
+<A HREF="http://fms.komkon.org/EmuSymbian/">
+http://fms.komkon.org/EmuSymbian/
+</A>
+</CENTER>
+
+<DT><H2>VGBA-PocketPC</H2>
+<DD>
+<P>
+The PocketPC version of VGBA has long been developed by Aaron Oneal. As
+PocketPC is long dead though, VGBA-PocketPC is dead as well. You can still
+get older PocketPC versions of VGBA and my other emulators from
+</P>
+<CENTER>
+<A HREF="http://fms.komkon.org/MorphGear/">
+http://fms.komkon.org/MorphGear/
+</A>
+</CENTER>
+
+</DL>
+
+<A NAME="LABG">
+<CENTER><H1>What is Included</H1></CENTER>
+</A>
+<P>
+This version of VGBA has emulation for the following:
+</P>
+<UL>
+<LI>ARM7TDMI CPU with ARM and THUMB opcode sets.
+<LI>Internal RAM at addresses <CODE>0x03000000</CODE> (32kB) and
+    <CODE>0x02000000</CODE> (256kB).
+<LI>Cartridge ROM at address <CODE>0x08000000</CODE>, mirrored at
+    <CODE>0x0A000000</CODE> and <CODE>0x0C000000</CODE>.
+<LI>Cartridge RAM at address <CODE>0x0E000000</CODE> (64kB).
+<LI>Cartridge FlashROM (JEDEC) at address <CODE>0x0E000000</CODE> (64kB).
+<LI>Cartridge serial EEPROM at address <CODE>0x09000000</CODE> (64x64bits),
+    mirrored at <CODE>0x0B000000</CODE> and <CODE>0x0D000000</CODE>.
+<LI>Interrupts: VBlank, HBlank, line coincidence, timers, DMA, joypad.
+<LI>Timers: TIMER0, TIMER1, TIMER2, TIMER3.
+<LI>DMA channels: DMA0, DMA1, DMA2, DMA3.
+<LI>DMA modes (instantaneous, HBlank, VBlank, HRefresh) and repeat feature.
+<LI>Joypad buttons and interrupts.
+<LI>GameBoy-compatible melodic sound chip with GBA extensions.
+<LI>Two channels of GBA-specific "direct" sound.
+</UL>
+<P>
+Not emulated:
+</P>
+<UL>
+<LI>DMA timings are not correct. DMA happens "instantly".
+<LI>CPU timings are close but not entirely correct. VGBA considers all
+    memory accesses as "sequential". There are some other discrepancies
+    as well, but overally, it should be pretty close.
+</UL>
+<P>
+Here is a list of emulated features:
+</P>
+<CENTER>
+<TABLE BORDER=1 BGCOLOR="#FFFFE0" CELLPADDING=3 CELLSPACING=0 WIDTH="100%">
+<TR BGCOLOR="#0033AA">
+<TD>Feature           <TD>Text BGs<TD>Rotation BGs<TD>MODE 3<TD>MODE 4<TD>MODE 5<TD>Sprites
+<TR><TD>Variable Size     <TD>YES     <TD>YES         <TD>N/A   <TD>N/A   <TD>N/A   <TD>YES
+<TR><TD>Tile Flipping     <TD>YES     <TD>N/A         <TD>N/A   <TD>N/A   <TD>N/A   <TD>YES
+<TR><TD>16/256-Color Tiles<TD>YES     <TD>N/A         <TD>N/A   <TD>N/A   <TD>N/A   <TD>YES
+<TR><TD>Scrolling         <TD>YES     <TD>N/A         <TD>N/A   <TD>N/A   <TD>N/A   <TD>N/A
+<TR><TD>Mosaic            <TD>YES     <TD>YES         <TD>YES   <TD>YES   <TD>YES   <TD>rotated sprites only
+<TR><TD>Rotation          <TD>N/A     <TD>YES         <TD>YES   <TD>YES   <TD>YES   <TD>YES
+<TR><TD>Window            <TD>YES     <TD>YES         <TD>YES   <TD>YES   <TD>YES   <TD>YES
+<TR><TD>Color Effects     <TD>YES     <TD>YES         <TD>YES   <TD>YES   <TD>YES   <TD>YES
+</TABLE>
+</CENTER>
+<P>
+Including the real Nintendo BIOS with the emulator would be a copyright
+violation. Therefore, I have tried to simulate GBA BIOS routines
+by trapping and handling ARM <CODE>SWI</CODE> opcodes. GBA BIOS is now
+fully emulated except for the built-in music player and some networking
+routines. Here is the list of supported BIOS calls:
+</P>
+<CENTER>
+<TABLE BORDER=1 BGCOLOR="#FFFFE0" CELLPADDING=3 CELLSPACING=0 WIDTH="100%">
+<TR BGCOLOR="#0033AA">
+    <TD>Function                  <TD>SWI #  <TD>Supported
+<TR><TD>BIOS_SoftReset            <TD>0x00   <TD>Yes
+<TR><TD>BIOS_RegisterRAMReset     <TD>0x01   <TD>Yes
+<TR><TD>BIOS_Halt                 <TD>0x02   <TD>Yes
+<TR><TD>BIOS_Stop                 <TD>0x03   <TD>Yes
+<TR><TD>BIOS_IntrWait             <TD>0x04   <TD>Yes
+<TR><TD>BIOS_VBlankIntrWait       <TD>0x05   <TD>Yes
+<TR><TD>BIOS_Div                  <TD>0x06   <TD>Yes
+<TR><TD>BIOS_DivARM               <TD>0x07   <TD>Yes
+<TR><TD>BIOS_Sqrt                 <TD>0x08   <TD>Yes
+<TR><TD>BIOS_ArcTan               <TD>0x09   <TD>Yes
+<TR><TD>BIOS_ArcTan2              <TD>0x0A   <TD>Yes
+<TR><TD>BIOS_CPUSet               <TD>0x0B   <TD>Yes
+<TR><TD>BIOS_CPUFastSet           <TD>0x0C   <TD>Yes
+<TR><TD>BIOS_BIOSChecksum         <TD>0x0D   <TD>Yes
+<TR><TD>BIOS_BgAffineSet          <TD>0x0E   <TD>Yes
+<TR><TD>BIOS_ObjAffineSet         <TD>0x0F   <TD>Yes
+<TR><TD>BIOS_BitUnPack            <TD>0x10   <TD>Yes
+<TR><TD>BIOS_LZ77UnCompWRAM       <TD>0x11   <TD>Yes
+<TR><TD>BIOS_LZ77UnCompVRAM       <TD>0x12   <TD>Yes
+<TR><TD>BIOS_HuffUnComp           <TD>0x13   <TD>Yes
+<TR><TD>BIOS_RLUnCompWRAM         <TD>0x14   <TD>Yes
+<TR><TD>BIOS_RLUnCompVRAM         <TD>0x15   <TD>Yes
+<TR><TD>BIOS_Diff8bitUnFilterWRAM <TD>0x16   <TD>Yes
+<TR><TD>BIOS_Diff8bitUnFilterVRAM <TD>0x17   <TD>Yes
+<TR><TD>BIOS_Diff16bitUnFilter    <TD>0x18   <TD>Yes
+<TR><TD>BIOS_SoundBiasChange      <TD>0x19   <TD>No
+<TR><TD>BIOS_SoundDriverInit      <TD>0x1A   <TD>No
+<TR><TD>BIOS_SoundDriverMode      <TD>0x1B   <TD>No
+<TR><TD>BIOS_SoundDriverMain      <TD>0x1C   <TD>No
+<TR><TD>BIOS_SoundDriverVSync     <TD>0x1D   <TD>No
+<TR><TD>BIOS_SoundChannelClear    <TD>0x1E   <TD>No
+<TR><TD>BIOS_MIDIKey2Freq         <TD>0x1F   <TD>No
+<TR><TD>BIOS_MusicPlayerOpen      <TD>0x20   <TD>No
+<TR><TD>BIOS_MusicPlayerStart     <TD>0x21   <TD>No
+<TR><TD>BIOS_MusicPlayerStop      <TD>0x22   <TD>No
+<TR><TD>BIOS_MusicPlayerContinue  <TD>0x23   <TD>No
+<TR><TD>BIOS_MusicPlayerFadeOut   <TD>0x24   <TD>No
+<TR><TD>BIOS_MultiBoot            <TD>0x25   <TD>No
+<TR><TD>BIOS_HardReset            <TD>0x26   <TD>No
+<TR><TD>BIOS_CustomHalt           <TD>0x27   <TD>No
+<TR><TD>BIOS_SoundDriverVSyncOff  <TD>0x28   <TD>No
+<TR><TD>BIOS_SoundDriverVSyncOn   <TD>0x29   <TD>No
+<TR><TD>BIOS_GetJumpList          <TD>0x2A   <TD>Yes
+</TABLE>
+</CENTER>
+
+<A NAME="LABH">
+<CENTER><H1>What is not Included</H1></CENTER>
+</A>
+<P>
+Absolutely no ROM images of commercial GameBoy Advance games are included.
+These games are copyrighted by the companies which produced them, and
+therefore, I cannot distribute any of these games. I'm also unable to tell
+you where to find the games, so do not send me email asking for them. You
+will have to look for them on your own.
+</P>
+<P>
+It may also be a good idea to buy a real cartridge for each GameBoy
+Advance ROM image you use with the emulator. Owning a real, physical
+cartridge is the right thing to do, both legally and ethically.
+</P>
+<P>
+The VGBA web page contains some links to GameBoy Advance cartridge copier
+info. Cartridge copiers can be used to dump GameBoy Advance cartridges
+into files. I cannot provide you with any additional information about
+these copiers, so do not send me email asking for this information. Use
+the copier-related links at the VGBA web page. 
+</P>
+<P>
+GameBoy Advance has a BIOS ROM inside with some useful subroutines.
+Including the real Nintendo BIOS with the emulator would be clearly illegal.
+Instead, VGBA tries to simulate GBA BIOS routines. It still has an option
+to use the real BIOS supplied from the <CODE>GBA.ROM</CODE> file in the
+current directory. I cannot tell you where to find the real BIOS, so do
+not ask me about it. The current BIOS simulation is quite functional. It
+also runs faster than the real BIOS would on the emulator.
+</P>
+
+<A NAME="LABI">
+<CENTER><H1>Buttons</H1></CENTER>
+</A>
+<P>
+These button assignments apply to all three VGBA ports developed by myself.
+They will work in Windows, Unix, and MSDOS.
+</P>
+<FONT COLOR="#000060">
+<PRE>
+  [SPACE]        - FIRE-A button (also: [SHIFT],A,S,D,F,G,H,J,K,L)
+  [CONTROL]      - FIRE-B button (also: Z,X,C,V,B,N,M)
+  [Q]            - FIRE-L button (also: E,T,U,O)
+  [W]            - FIRE-R button (also: R,Y,I,P)
+  [TAB]          - SELECT button
+  [ENTER]        - START button
+  [ESC]          - Quit emulation (also: [F12])
+  [F2]           - Turn soundtrack logging on/off
+  [F3]           - Turn FIRE-A button autofire on/off
+  [ALT]+[F3]     - Turn FIRE-L button autofire on/off
+  [F4]           - Turn FIRE-B button autofire on/off
+  [ALT]+[F4]     - Turn FIRE-R button autofire on/off
+  [F5]           - Invoke built-in menu
+  [F6]           - Load emulation state from .STA file
+  [F7]           - Save emulation state to .STA file
+  [F8]           - Replay last few seconds of gameplay
+  [F9]           - Fast-forward emulation (also: [PGUP])
+  [F11]          - Reset GBA hardware
+  [F12]          - Quit emulation (also: [ESC])
+  [PGUP]         - Fast-forward emulation (also: [F9])
+  [PGDOWN]       - Toggle GameShark cheats
+  [5]-[8]        - Turn backgrounds display on/off
+  [9]            - Turn sprites display on/off
+  [-]            - Descrease light level (Boktai)
+  [=]            - Increase light level (Boktai)
+
+<B>With #define DEBUG:</B>
+  [F1]           - Go into the built-in debugger
+
+<B>With #define SOUND:</B>
+  [ALT]+[PGUP]   - Increase audio volume
+  [ALT]+[PGDOWN] - Decrease audio volume
+  [0]            - Turn all sound on/off
+  [1]-[4]        - Turn melodic sound channels on/off
+  [[],[]]        - Turn direct sound channels on/off
+
+<B>With #define WINDOWS:</B>
+  [ALT]+[ENTER]  - Switch between full scren and window modes
+</PRE>
+</FONT>
+
+<A NAME="LABJ">
+<CENTER><H1>Command Line Options</H1></CENTER>
+</A>
+<P>
+Start VGBA with the following command line:
+</P>
+<FONT COLOR="#000060">
+<CENTER><PRE>
+vgba [-option1 [-option2...]] [FILENAME.GBA]
+</PRE></CENTER>
+</FONT>
+<P>
+When no cartridge name is given, VGBA will print the list of keyboard
+assignments and available command line options. Following is a list of
+options supported in VGBA-MSDOS and VGBA-Unix. VGBA-Windows only accepts
+the cartridge name.
+</P>
+<FONT COLOR="#000060">
+<PRE>
+  -skip &lt;percent&gt;     - Percentage of frames to skip [25]
+  -verbose &lt;level&gt;    - Select debugging messages [1]
+                          0 - Silent          1 - Startup messages
+                          2 - I/O accesses    4 - Illegal memory accesses
+                          8 - DMA transfers  16 - Illegal CPU ops
+                         32 - SWI calls      64 - FlashROM/EEEPROM/RTC
+                        128 - Sound messages
+  -crc/-nocrc         - Check cartridge CRC/CMP [-crc]
+  -guesshw/-defaulthw - Guess FlashROM/EEPROM ID and size [-guesshw]
+  -flashid &lt;id&gt;       - Set FlashROM maker/device ID [D4BFh]
+  -flash &lt;bits&gt;       - Set FlashROM size, &ge;16 bits [17]
+  -eeprom &lt;bits&gt;      - Set EEPROM size, 6..16 bits [6]
+  -tilt/-rtc          - Emulate tilt sensor or real time clock chip [-rtc]
+  -gs0/-gs1/-gs3      - GameShark cheats encryption: none/v1/v3 [-gs3]
+  -logsnd &lt;filename&gt;  - Write soundtrack to a MIDI file [LOG.MID]
+  -ds &lt;method&gt;        - Sound rendering method [1]
+                        0 - Off                1 - Automatic
+                        2 - Accurate           3 - Fast
+
+<B>With #define SOUND:</B>
+  -sound [&lt;quality&gt;]  - Sound emulation quality [22050]
+  -nosound            - Same as '-sound 0'
+
+<B>With #define DEBUG:</B>
+  -trap &lt;address&gt;     - Trap execution when PC reaches address [FFFFFFFFh]
+                        When a keyword 'now' is used in place of the
+                        &lt;address&gt;, execution will trap immediately.
+
+<B>With #define MSDOS or UNIX:</B>
+  -sync &lt;frequency&gt;   - Sync screen updates to &lt;frequency&gt; [-nosync]
+                        (&lt;frequency&gt; must be in 20Hz..100Hz range)
+  -nosync             - Do not sync screen updates [-nosync]
+  -tv/-lcd/-raster    - Simulate TV scanlines or LCD raster [off]
+  -linear             - Scale display with linear interpolation [off]
+  -soft/-eagle        - Scale display with 2xSaI or EAGLE [off]
+  -epx/-scale2x       - Scale display with EPX or Scale2X [off]
+  -cmy/-rgb           - Simulate CMY/RGB pixel raster [off]
+  -mono/-sepia        - Simulate monochrome or sepia CRT [off]
+  -green/-amber       - Simulate green or amber CRT [off]
+  -4x3                - Force 4:3 television screen ratio [off]
+  -fps                - Show framerate counter [off]
+
+<B>With #define MSDOS:</B>
+  -vsync              - Sync screen updates to VBlank [-vsync]
+
+<B>With #define UNIX:</B>
+  -saver/-nosaver     - Save CPU when inactive [-saver]
+  -scale &lt;factor&gt;     - Scale window by &lt;factor&gt; [2]
+
+<B>With #define MITSHM:</B>
+  -shm/-noshm         - Use MIT SHM extensions for X [-shm]
+</PRE>
+</FONT>
+
+<A NAME="LABK">
+<CENTER><H1>Frequently Asked Questions</H1></CENTER>
+</A>
+<OL>
+<LI><B>I WANNA PLAY GAMES!!!! WHERE DO I GET GAMES???????</B>
+<P>
+I do not know. I can't give you any due to both legal and moral reasons.
+Please, do not mail me asking for games. I will delete your mail right
+away, and you won't get an answer.
+</P>
+<LI><B>Can I play GameBoy Classic and GameBoy Color games on VGBA?</B>
+<P>
+No, you can't. GameBoy Advance hardware is completely different from the
+older GameBoy and GameBoy Color models. To play older games, you may
+want to consider my other emulator,
+<I><A HREF="http://fms.komkon.org/VGB/">Virtual GameBoy</A> (VGB)</I>.
+</P>
+<LI><B>How do I copy games from cartridges to a computer?</B>
+<P>
+You can use a special device called cartridge copier, such as 
+<I>Flash Advance Linker</I> from
+<A HREF="http://www.lik-sang.com/"><I>Lik-Sang</I></A>. Don't forget to 
+get a rewritable flash card too.
+</P>
+<LI><B>What is GameBoy Advance? How its hardware works?</B>
+<P>
+GameBoy Advance (GBA) is a handheld videogame machine made by Nintendo. Its
+hardware has nothing to do with GameBoy and GameBoy Color handhelds
+previously produced by Nintendo. GBA is built around an ARM7TDMI 32bit
+CPU running at 16MHz. GBA video subsystem is very similar to that of SNES,
+but more advanced. The sound subsystem uses direct sample output. GBA also
+includes the four-channel melodic sound chip from the original GameBoy.
+</P>
+<P>
+In order to be compatible with the original GB/GBC, GBA includes the complete
+set of GBC hardware. This hardware (aside from the sound chip) is not
+accessible from the GBA side and only used when somebody inserts a GB/GBC
+cartridge into GBA.
+</P>
+<LI><B>There is no version of VGBA for my Unix!</B>
+<P>
+I am trying to compile Unix binaries for as many flavors of Unix as
+possible, but as I do not have access to many machines, do not expect
+immediate support for every Unix flavor out there. Don't mail me asking
+for the source either: VGBA source code is not publicly distrbutable,
+as much as I regret to say this :(.
+</P>
+<LI><B>My favorite game doesn't work on VGBA. What do I do?</B>
+<P>
+There may be several reasons why a game has problems running on VGBA
+or does not run at all.
+</P>
+<P>
+<UL>
+<LI>
+<P>
+    If emulator does not even recognize the ROM image, its CRC or CMP
+    may be wrong. Try turning CRC checking off by using the
+    <CODE>-nocrc</CODE> option or clearing "Check Cartridge CMP" checkbox
+    in VGBA-Windows Setup Panel. You really ought to find an uncorrupted
+    ROM image though.
+</P>
+<LI>
+<P>
+    The game may be using a different EEPROM type. EEPROM is a little
+    chip that sits on a cartridge and stores save-games. Some GBA games
+    use 64x64bit EEPROMs (<CODE>-eeprom 6</CODE>) while others use
+    16384x64bit EEPROMs (<CODE>-eeprom 14</CODE>). In VGBA-Windows, you
+    can simply select the EEPROM type from the Setup Panel.
+</P>
+<LI>
+<P>
+    If some sprites blink or do not appear at all, try changing
+    <CODE>-skip</CODE> value (0 will give you the best picture, but
+    the slowest emulation), or moving an "Skip Frames" knob in the
+    VGBA-Windows Setup Panel.
+</P>
+<LI>
+<P>
+    VGBA may not currently run this game. Not all games are supported at  
+    this moment. Don't expect 100% compatibility with the real hardware. 
+    At least, not yet :).
+</P>
+</UL>
+</P>
+<LI><B>Direct sound sounds really bad!</B>
+<P> 
+Use <CODE>-ds</CODE> command line option (or corresponding options in the
+VGBA-Windows Setup Panel) to choose the way VGBA renders direct sound. In
+Windows, you should also try changing volume, sound rate, and the number
+of sound buffers. If this doesn't help, you may be out of luck. Hopefully,
+sound emulation becomes better in the upcoming versions.
+</P>
+<LI><B>Why is VGBA so slow on my machine?</B>
+<P> 
+Because your machine is too slow to run VGBA. My experience shows that
+you need at least a PentiumII/400 machine with fast video to run VGBA
+at a reasonable speed. Following are the ways to speed things up:
+</P>
+<P>
+<UL>
+<LI>Increase Update Period. The picture will get more jerky, but VGBA
+    will become faster.
+<LI>On Unix, always use MIT Shared Memory Extension for X (MITSHM). This,
+    of course, means that you have to run VGB locally.
+<LI>On Windows and Unix, use 1:1 window to achieve the highest speed.
+<LI>On Windows, use MIDI sound, as wave synthesis takes quite a lot of
+    CPU time.
+</UL>
+</P> 
+<LI><B>VGBA is too fast on my machine! How do I slow it down?</B>
+<P>
+Frankly, when I started writing VGBA, I never expected that it will be
+<U>too fast</U> on any machine :). But times change...
+</P>
+<P>
+<UL>
+<LI>On Unix, use <CODE>-sync</CODE> option to tie screen updates to
+    the certain frequency.
+<LI>On Windows, use "Sync To..." option in the Setup Panel to tie
+    screen updates to a certain frequency.
+<LI>Decrease "Skip Frames" (<CODE>-skip</CODE> on Unix) value. The
+    emulation will become much slower, but smoother.
+<LI>On Windows and Unix, double or triple the window size.
+</UL>
+</P>
+<LI><B>When starting VGBA-Unix, ld says that some library isn't found.</B>
+<P>
+This may happen if the versions of your shared libraries are older than
+the ones for which VGBA has been compiled. A decent way to deal with this
+is to upgrade your Unix. A quick and dirty way is to make a symbolic link 
+from the existing library to a name required by VGBA.
+</P>
+<LI><B>When starting VGBA-Unix, I get X_ShmAttach error.</B>
+<P>
+You are probably trying to run VGBA-Unix on a remote Xterminal while it
+attempts to use shared memory for interfacing with X. Use
+<CODE>-noshm</CODE> option to tell it not to use shared memory. 
+</P>
+<LI><B>When starting VGBA-Unix, I get X_PutImage error.</B>
+<P>
+VGBA-Unix version currently needs 16bit X. Xterminals that do not support
+16bit image format will not work.
+</P>
+<LI><B>The sound is distorted in the VGBA-Windows. How do I fix it?</B>
+<P>
+The wave-synthetized sound in VGBA may become distorted on slow or
+highly loaded machines (no graphics acceleration, for example). There are
+several ways you can improve sound:
+</P>
+<P>
+<UL>
+<LI>Use MIDI sound instead. It has both advantages and disadvantages
+    though.
+<LI>Make VGBA window smaller to decrease the load on the CPU. 1:1 is
+    the optimal size.
+<LI>Decrease the sound rate (in Setup Panel). The sound may become tinkier,
+    but less distorted.
+<LI>Increase the number of wave buffers (in Setup Panel). This may
+    cause sound to fall a second or two behind the screen action, but
+    the sound quality will become better.
+</UL>
+</P>
+<LI><B>Does VGBA-Windows support joystick? My joystick doesn't work!</B>
+<P>
+VGBA-Windows supports joystick. If your joystick does not work, go into
+Windows Control Panel to see if it is configured and calibrated properly. 
+Also, some new joysticks working in esoteric standards (like GRiP) are
+known to have problems.
+</P>
+<LI><B>Colors are all screwed up in VGBA-Windows!</B>
+<P>
+VGBA-Windows <U>requires</U> Windows to be in 65536-color or better
+color mode. When running Windows in 256-color mode, it will try to
+approximate colors to existing ones, but expect results to be dismal.
+</P>
+<LI><B>Black window in VGBA-Windows!</B>
+<P>
+If you are running Windows in 256-color mode, then this is most likely
+the cause of a problem. Try switching Windows into 65536-color or better
+screen mode. 
+</P>
+<LI><B>How do I save and load the GBA state during the game?</B>
+<P>
+The GBA state can be saved by pressing [F7] button. The resulting
+data file will have the same name as your .GBA file, but its extension is
+going to be .STA. You can load state from this file by pressing [F8]
+at any point in the game. This state file will also be loaded automatically
+next time you start VGBA. The same state file is not guaranteed to work for
+versions of VGBA running on a different hardware. State saving is not
+perfect yet, so for some games state may not be correctly saved.
+</P>
+</OL>
+
+<A NAME="LABC">
+<CENTER><H1>History</H1></CENTER>
+</A>
+<H2>New in Version 6.3</H2>
+<UL>
+<LI>Fixed melodic audio playback when DirectSound is off.
+<LI>Fixed sound in <I>International Karate</I>.
+<LI>Fixed sound in <I>Phantasy Star</I>.
+</UL>
+<H2>New in Version 6.2</H2>
+<UL>
+<LI>Added CPU-based simple linear scaling algorithm.
+<LI>Added file drag'n'drop support to VGBA-Windows.
+<LI>Added <CODE>-linear</CODE> command line option to VGBA-Linux.
+</UL>
+<H2>New in Version 6.1</H2>
+<UL>
+<LI>Refactored scaling and special effects framework in VGBA-Windows.
+<LI>Optimized scaling for large screens and windows.
+<LI>Added option to force hardware linear scaling.
+<LI>Enabled <I>"Video | Stretch Full Screen"</I> option with effects enabled.
+<LI>Enabled <I>"Video | Force 4:3 Screen"</I> option with effects enabled.
+<LI>Added <I>"Video | Interpolate Video | Linear Scaling"</I> option to VGBA-Windows.
+</UL>
+<H2>New in Version 6.0</H2>
+<UL>
+<LI>Added <I>"File | Clear Settings and Quit"</I> option to VGBA-Windows.
+<LI>Fixed small windows behavior in VGBA-Windows.
+<LI>Fixed window position behavior in VGBA-Windows.
+<LI>Saving physical joystick/gamepad selection in VGBA-Windows.
+</UL>
+<H2>New in Version 5.9</H2>
+<UL>
+<LI>Fixed bug when writing bytes to palette RAM.
+<LI>Fixed bug when reading words from BIOS.
+<LI>Recompiled sources with <CODE>"-Wall"</CODE> and fixed warnings.
+<LI>Deprecated <CODE>-DNEW_STATES</CODE> and <CODE>-DSOUND</CODE> options.
+</UL>
+<H2>New in Version 5.8</H2>
+<UL>
+<LI>Added remaining time display during replay.
+<LI>Added shadow underneath the time display.
+<LI>Stopping replay when menu opens on Windows.
+<LI>Fixed replay rollover mechanism.
+</UL>
+<H2>New in Version 5.7</H2>
+<UL>
+<LI>Fixed rotated backgrounds bug (scenery in <I>Top Gear Rally</I>, etc).
+<LI>Fixed default window position to the middle of the screen in VGBA-Windows.
+<LI>Fixed DirectInput joysticks support in VGBA-Windows.
+<LI>Made directional pads work on XBox gamepads.
+</UL>
+<H2>New in Version 5.6</H2>
+<UL>
+<LI>Added multiple monitor support to VGBA-Windows.
+<LI>Fixed disappearing window in VGBA-Windows.
+<LI>Fixed best full-screen mode detection in VGBA-Windows.
+<LI>Fixed window flicker that appeared after recent Win10 updates.
+<LI>Switched VGBA-Linux to using PulseAudio sound.
+<LI>Updated old PulseAudio driver for 64bit Linux.
+</UL>
+<H2>New in Version 5.5</H2>
+<UL>
+<LI>Added support for DirectInput joysticks to VGBA-Windows.
+<LI>Moved all input-related options to the <I>"Input"</I> menu in VGBA-Windows.
+<LI>Fixed crash when changing audio sampling rate in VGBA-Windows.
+<LI>Added <I>"Draw 65% Frames"</I> option to VGBA-Windows.
+<LI>Fixed screen updates after changing scaling algorithm in VGBA-Windows.
+</UL>
+<H2>New in Version 5.4</H2>
+<UL>
+<LI>Added <I>"Interpolate Video | Nearest Neighbor"</I> option to VGBA-Windows.
+<LI>Added <I>"Force 4:3 Screen"</I> option to VGBA-Windows.
+<LI>Added <CODE>-4x3</CODE> command line option to VGBA-Unix.
+<LI>VGBA-Windows will not overwrite last software file name with other names.
+<LI>Fixed file associations on Windows 8+.
+<LI>Updated VGBA-Windows application icon.
+</UL>
+<H2>New in Version 5.3</H2>
+<UL>
+<LI>Added Scale2X scaling algorithm.
+<LI>Added Monochrome, Green, Amber, and Sepia CRT emulation.
+<LI>Added <CODE>-scale2x</CODE> and <CODE>-raster</CODE> command line options.
+<LI>Added <CODE>-mono</CODE>, <CODE>-sepia</CODE>, <CODE>-green</CODE>,
+    and <CODE>-amber</CODE> command line options.
+<LI>EMULib-specific command line options now processed inside EMULib.
+<LI>Added <I>"Scale2x Algorithm"</I> and <I>"LCD Raster"</I> options on Windows.
+<LI>Renamed <I>"Color Raster"</I> menu to <I>"Color Filter"</I> on Windows.
+<LI>Deprecated <CODE>-notv</CODE> and <CODE>-nolcd</CODE> command line options.
+</UL>
+<H2>New in Version 5.2</H2>
+<UL>
+<LI>Added 14bit EEPROM setting for <I>Aladdin</I> (all versions).
+<LI>Disabled FlashROM for all <I>NES Classics</I> games.
+<LI>Fixed FlashROM/EEPROM size selection menu in VGBA-Windows.
+<LI>Added "Play Sound When Inactive" option to VGBA-Windows.
+<LI>Added "Clear File Associations" option to VGBA-Windows.
+<LI>Made color raster effects stronger.
+</UL>
+<H2>New in Version 5.1</H2>
+<UL>
+<LI>Added EPX and EAGLE scaling algorithms.
+<LI>Added special effects simulating individual pixel components.
+<LI>Fixed memory corruption bug in the instant replay recorder.
+<LI>Fixed instant replay not restoring successive states.
+<LI>Fixed instant replay not recording the first state.
+<LI>Merged scanline options into "Simulate Scanlines" in VGB-Windows.
+<LI>Merged scaling options into "Interpolate Video" in VGB-Windows.
+<LI>Added "Apply Color Raster" submenu to VGB-Windows.
+<LI>Added "RGB Raster" and "CMY Raster" options to VGB-Windows.
+<LI>Added <CODE>-rgb</CODE> and <CODE>-cmy</CODE> command line options.
+<LI>Added <CODE>-epx</CODE> and <CODE>-eagle</CODE> command line options.
+</UL>
+<H2>New in Version 5.0</H2>
+<UL>
+<LI>Now rendering remaining samples when direct sound channel disabled.
+<LI>Now playing all rendered samples at the end of a video frame.
+<LI>Fixed direct sound with rates close to 22kHz (<I>Super Puzzle Fighter 2</I>).
+<LI>Fixed melodic sound when wave sound is off (<I>International Karate</I>).
+<LI>Removed "Direct Sound Off" option from built-in menu and VGBA-Windows.
+<LI>Added "64kB FlashROM"/"128kB FlashROM" options to VGBA-Windows.
+<LI>Made sure "Guess Hardware" does not mess user-selected storage options.
+<LI>When guessing hardware, default to 6bit EEPROM, 64kB FlashROM.
+</UL>
+<H2>New in Version 4.9</H2>
+<UL>
+<LI>Removed waveform interpolation for more realistic sound.
+<LI>Switched VGBA-Windows to Direct3D textures-based rendering.
+<LI>Added "Video | Stretch Full Screen" option to VGBA-Windows.
+<LI>Added "Hardware | Debugger" option to VGBA-Windows.
+<LI>Added <CODE>-lcd</CODE> and <CODE>-nolcd</CODE> command line options.
+</UL>
+<H2>New in Version 4.8</H2>
+<UL>
+<LI>In VGBA-Windows, both full-screen and windowed modes now use Direct3D.
+<LI>Fixed switching between full-screen and windowed modes in VGBA-Windows.
+<LI>Ported fixes from VGBA-Android 4.8 to VGBA-Windows.
+<LI>Removed .STA files from the "Open File" dialog to avoid confusion.
+<LI>Fixed the documentation.
+</UL>
+<H2>New in Version 4.7</H2>
+<UL>
+<LI>Fixed corrupted background in <I>Golden Sun</I> battles.
+<LI>Fixed hangup and walk-then-roll in <I>Legend Of Zelda: The Minish Cap</I>.
+<LI>Greatly improved sound quality, fixing audio in many games.
+<LI>Resetting rotation when background priority changes, not size.
+<LI>Added large ring buffer to account for audio jitter.
+<LI>Added correct legacy noise channel emulation.
+<LI>Added configurable random noise generator to EMULib.
+<LI>Fixed restoring legacy sound chip state.
+<LI>Fixed arithmetic bug in the EMULib audio mixing routine.
+<LI>Moved GBA timers emulation into a separate function.
+<LI>No longer muffling legacy noise channel (no more need).
+<LI>Cleaned audio in <I>Metroid Fusion</I> and <I>Metroid Zero Mission</I>.
+<LI>Fixed scratching sounds in <I>Castlevania: Circle Of The Moon</I> title.
+<LI>Fixed distortions in <I>Golden Sun</I> and <I>Golden Sun 2</I> intros.
+<LI>Removed debug messages from the BIOS emulation, making things faster.
+</UL>
+<H2>New in Version 4.6</H2>
+<UL>
+<LI>Added automated cheat search tool (press [F5] and select <I>"Search cheats"</I>).
+<LI>Added always-on gameplay recording to VGBA-Unix (press [F8] to replay).
+<LI>Added <I>"Save unencrypted"</I> option to built-in menu.
+<LI>MULS/MLAS instructions no longer change C/V flags.
+<LI>Fixed saving .SAV files in VBA-compatible format on VGBA-Windows.
+<LI>Fixed window resizing in VGBA-Unix.
+</UL>
+<H2>New in Version 4.5</H2>
+<UL>
+<LI>Improved audio quality.
+<LI>Now saving VBA-compatible .SAV files by default.
+<LI>Added GameShark cheats emulation (both v1 and v3).
+<LI>Added backward compatibility with VBA .SAV files.
+<LI>Added week day register to the RTC emulation.
+<LI>Added light sensor emulation (Boktai and Boktai 2).
+<LI>Added gyro sensor emulation (Warioware Twisted).
+<LI>Added tilt sensor emulation (Yoshi Topsy Turvy, etc).
+<LI>Fixed RumblePak emulation (Warioware Twisted and Drill Dozer).
+<LI>Fixed sprite color blending (Boktai 2 and other games).
+<LI>Fixed FlashROM saves in Pokemon and other games.
+<LI>No longer generating HBlank and VBlank IRQs at the same time
+    (EZ-Talk).
+<LI>No longer allowing ICount to fall too far behind after a DMA
+    transfer (Lego Racers 2, etc.).
+<LI>Fixed rotation parameters initialization in ResetGBA()
+    (Lego Racers 2, etc.).
+<LI>Fixed ResetCPU() to request THUMB-to-ARM switch from the emulation
+    loop.
+<LI>Fixed handling of &gt;16MB games by disabling EEPROM at 0x09000000.
+<LI>Fixed ArcTan2() BIOS function (Mario and Luigi dyeing minigame).
+<LI>Fixed SoftReset() BIOS function, no longer accepting an argument.
+<LI>Fixed CPUSet() BIOS function (Galidor and Final Fantasy 6).
+<LI>Fixed RegisterRAMReset() BIOS function to unconditionally reset
+    DISPCONT and BLDCONT VDP registers (Spyro+Crash Fusion).
+<LI>Fixed tilt sensor emulation to use separate developer supplied
+    Tilt() function rather than FIREL/FIRER button bits.
+<LI>Added BIOS read protection to ARMonARM emulation (Tetris Worlds,
+    Onimusha Tactics, Salt Lake City 2002, etc.).
+<LI>Fixed ARM V-flag computation after subtraction (Caravan Heart).
+<LI>Fixed THUMB PUSH instruction for cases where DMA is initiated with PUSH.
+<LI>Fixed MOVLR/BLL instruction sequence in THUMB mode to correctly 
+    perform a call (Mario Golf Advance Tour).
+<LI>Fixed LDM/STM instructions accessing stack at misaligned addresses
+    (Mario Golf Advance Tour).
+<LI>Fixed a typo in the SMLAL instruction (Lego Racers 2, etc.).
+<LI>Fixed color #0 transparency in VDP MODE4.
+<LI>Fixed <CODE>-ds</CODE> command line parameter to take values from 0
+    ("mute") to 3 ("fast").
+<LI>Disabling windows with invalid coordinates (fixed Sword Of Mana).
+<LI>Resetting rotation when BG size changes (fixed Rayman 3 Swamp Zone).
+<LI>Fixed After Burner in Sega Arcade Gallery (by handling illegal reads).
+<LI>Fixed playfield and in-game saves in Crazy Taxi (no longer hangs).
+<LI>VGBA-Windows, VGBA-MSDOS, and VGBA-Unix now use mouse buttons to
+    simulate tilt sensor.
+<LI>Switched VGBA-Windows to Direct3D in full-screen mode.
+<LI>Fixed VGBA-Unix to correctly restore sound when mouse focus returns
+    to the window.
+<LI>Reduced audio latency setting in VGBA-Unix to 50ms.
+</UL>
+<H2>New in Version 3.6</H2>
+<UL>
+<LI>Sound quality improved in games that frequently switch sampling
+    frequency (Star Wars, etc.).
+<LI>Now saving melodic sound chip state. <B>State file format changed.</B>
+<LI>Added more graceful handling of fail conditions when loading state.
+<LI>Fixed LSR/ASR #0 instructions in ARMonARM emulation to act as
+    LSR/ASR #32, in both THUMB and ARM modes.
+<LI>Fixed unaligned memory reads in ARMonARM emulation to work the same
+    way they do on a real ARM (Pokemon no longer has glitches).
+<LI>Fixed STRB/STRH instructions in ARMonARM emulation to clear
+    unused argument bits before calling BWrARM()/WWrARM().
+<LI>Moved state loading to <CODE>[F6]</CODE>, L/R button autofire toggles
+    to <CODE>[ALT]+[F3]/[F4]</CODE>. This makes VGBA consistent with my
+    other emulators.
+<LI>Added <CODE>[F8]</CODE> to toggle scanline simulation effect,
+    <CODE>[ALT]+[F8]</CODE> to toggle image softening.
+<LI>Made VGBA-Symbian compatible with the S60 5th Edition found in
+    Nokia 5800 and upcoming N97.
+<LI>VGBA-Maemo now uses x3 magnification when running in full-screen mode. 
+<LI>Fixed <CODE>[F3]</CODE>, <CODE>[F4]</CODE>, <CODE>[F5]</CODE>, 
+    and <CODE>[F6]</CODE> keys in VGBA-Unix.
+</UL>
+<H2>New in Version 3.5</H2>
+<UL>
+<LI>Ported VGBA to Unix using the new EMULib framework. I will try to
+    compile the new <B>VGBA-Unix</B> for as many Unix flavors as possible.
+    At the moment, only Ubuntu Linux binaries are available.
+<LI>Ported VGBA to Maemo OS2008 used in N800 and N810 internet tablets
+    from Nokia. <B>VGBA-Maemo</B> is specifically optimized for internet
+    tablets using assembler modules from VGBA-Symbian.
+<LI>Renamed <CODE>-zoom/-nozoom</CODE> to <CODE>-soft/-nosoft</CODE>.
+<LI>Added <CODE>-scale</CODE> option to scale window on Unix.
+<LI>Options <CODE>-tv/-notv</CODE>, <CODE>-soft/-nosoft</CODE> now work
+    for MSDOS, Unix, and Maemo.
+<LI>Changed VGBA-Maemo touch screen layout to place directional buttons
+    on the left, fire buttons on the right.
+<LI>VGBA-Symbian display routines rewritten in ARM assembler for speed. 
+    This should mainly affect UIQ3 users but S60 users will also benefit.
+<LI>Split VGBA-Symbian configuration menu into four tabs, making
+    "Video" and "Audio" settings separate.
+<LI>Added "Audio Latency", "Skip Frames", and "Sync Updates" settings
+    to VGBA-Symbian.
+<LI>Documentation and built-in help changed, many inconsistencies removed.
+</UL>
+<H2>New in Version 3.4</H2>
+<UL>
+<LI>Fixed line coincidence bit not being cleared with each new scanline.
+    This made Treasure Planet dialogs work.
+<LI>Fixed inline <CODE>WRdARM()</CODE> function to read from serial EEPROM.
+<LI>Fixed a memory corruption bug in the <CODE>SoftReset()</CODE> and
+    <CODE>RegisterRAMReset()</CODE> routines. Lufia no longer crashes
+    after a quick-save.
+<LI>Moved FlashROM and EEPROM memory allocation to <CODE>ResetGBA()</CODE>
+    where it belongs.
+<LI>Now preserving debugger breakpoint settings when loading state.
+<LI>Now locking keyboard processing when inside built-in configuration
+    menu or debugger.
+<LI>Added GBA-specific debugger view (press [N] in debugger).
+<LI>Added new, much better, scanline simulation and video softening
+    effects to VGBA-Windows.
+<LI>VGBA-Windows full-screen mode now runs in 640x480 resolution.
+<LI>Now switching sound off when entering built-in menu in VGBA-Windows.
+    This mainly affects melodic sound mode (i.e. MIDI).
+<LI>VGBA-MSDOS now runs in 640x480x15bpp VESA screen mode when
+    <CODE>-zoom</CODE> or <CODE>-tv</CODE> options used, otherwise
+    it runs in 320x200x15bpp screen mode.
+<LI>Added new "Fill & Soften" zoom mode to VGBA-Symbian. It is
+    rather slow though.
+<LI>Added screen orientation and backlight controls to VGBA-Symbian.
+<LI>Fixed possible source of instabilities in the S60 open file dialog
+    in VGBA-Symbian.
+<LI>Fixed exit via Symbian-specific menu.
+<LI>Fixed premature termination of the emulation thread when exiting
+    VGBA-Symbian, soundtrack recording and config saving work again.
+<LI>VGBA-Symbian signed with a new certificate, as the old one has
+    expired.
+</UL>
+<H2>New in Version 3.3</H2>
+<UL>
+<LI>Fixed rotated sprite mask rendering.
+<LI>Somewhat optimized rotated sprite rendering.
+<LI>Optimized BIOS emulation to use less floating point operations.
+<LI>Fixed an LDR/STR display bug in the ARM debugger.
+<LI>Added a universal LoadFile() function.
+<LI>Rehashed built-in menu options to make them more accessible.
+<LI>Further extended and optimized Symbian screen rendering routines.
+<LI>Fixed a bug in VGBA-Windows that started MIDI logging on entering
+    the debugger.
+<LI>Finally fixed opendir() problem in EMULib-Symbian. All built-in
+    menu file dialogs work now!
+<LI>VGBA-Symbian application menu is now split into three pages.
+<LI>Added configurable button and key mappings to VGBA-Symbian.
+<LI>Added "fill screen" zoom option to VGBA-Symbian.
+<LI>Added frame rate display option to VGBA-Symbian.
+<LI>Added MIDI soundtrack logging to VGBA-Symbian (melodic sound
+    only, saved into E:\Sounds and can be used as ringtones).
+<LI>Fixed and optimized TV scanline simulation in VGBA-Symbian.
+<LI>Made scanline effect stronger in VGBA-Symbian.
+</UL>
+<H2>New in Version 3.2</H2>
+<UL>
+<LI>Fixed immediate argument handling in MSR opcode.
+<LI>Accelerated BX opcode.
+<LI>Fixed and improved built-in debugger.
+<LI>Added built-in configuration menu ([F5]). FIRE-L autofire switch
+    has moved to [CONTROL]+[F5].
+<LI>Introduced mode bits and the proper ResetGBA() function (state file
+    format has changed).
+<LI>Made VGBA reuse previously allocated memory if the new allocation
+    fails. This should help VGBA-Symbian on the phones with small memory.
+</UL>
+<H2>New in Version 3.1</H2>
+<UL>
+<LI>MSDOS and Windows versions are now based on the new framework.
+<LI>Windows version has got a new simplified user interface.
+<LI>Windows version now runs faster with larger windows. 
+<LI>Started adding Nintendo DS emulation (not yet complete).
+<LI>Added tilt sensor emulation (use <CODE>-tilt</CODE> option).
+<LI>Added screen buffer based ARM debugger.
+<LI>Replaced "updates per VBlank" (<CODE>-uperiod</CODE>) with
+    "percentage of skipped frames" option (<CODE>-skip</CODE>).
+<LI>Further improved audio quality.
+</UL>
+<H2>New in Version 3.0</H2>
+<UL>
+<LI>Added a routine that guesses correct FlashROM ID and the FlashROM
+    or EEPROM size from the cartridge ID. Super Mario Brothers 3 and
+    Pokemon Sapphire work now. Use <CODE>-guesshw</CODE> and 
+    <CODE>-defaulthw</CODE> options to switch guessing on and off.
+<LI><B>Added DirectDraw-based full screen mode to VGBA-Windows.</B>
+    Press [ALT]+[ENTER] to switch in and out of the full screen mode. 
+    Use it with caution, as DirectDraw is notoriously unstable.
+<LI>Fixed ARM LDM/STM opcodes to ignore lower two bits of address.
+<LI>Fixed ARM MSR opcode to allow setting any of the four areas in
+    the CPSR and SPSR registers.
+<LI>Fixed a bug in the character screen drawing code that could crash
+    the program.
+<LI>Finally fixed the time counting bug that caused bad sound distortions
+    in many games, especially when using the <CODE>-ds 1</CODE> sound
+    rendering option.
+<LI>Now resetting the line coincidence flag on writes to DISPSTAT to
+    enable line coincidence interrupts at each scanline (F-Zero 2). 
+<LI>Changed FastSet() BIOS call to round transfer size to the nearest
+    multiple of 8 quads (32 bytes) and check source address for bounds.
+<LI>Fixed several bugs in the MIDI logging code and the MIDI sound
+    driver in VGBA-Windows.
+<LI>Added fast-forwarding option ([PAGEUP]).
+<LI>Added TV raster simulation to VGBA-Windows and VGBA-MSDOS.
+<LI>Added VGBA-Windows options to set FlashROM ID and hardware guessing
+    mode.
+<LI>Raised the maximal "Sync to..." frequency to 200Hz.
+<LI>Window size and position are now saved on exit in VGBA-Windows.
+</UL>
+<H2>New in Version 2.1</H2>
+<UL>
+<LI>Save (.SAV) file format has changed due to
+    addition of &gt;64kB FlashROMs. 
+<LI>State (.STA) file format has changed due to
+    addition of RTC and &gt;64kB FlashROMs.
+<LI>The old <CODE>-flash</CODE> has been changed to <CODE>-flashid</CODE>.
+<LI>The new <CODE>-flash</CODE> sets the number of FlashROM address bits
+    (&geq;16).
+<LI>Added RTC support (clock in Pokemon series).
+<LI>Added support for &gt;64kB FlashROMs (Pokemon series, etc.).
+<LI>Added MIDIKey2Freq() to the BIOS emulation (thanks to Aaron Oneal).
+<LI>Fixed a bug in the ArcTan2() emulation (Castlevania: Aria Of Sorrow).
+<LI>Fixed possible memory corruption in EEPROM emulation (Lord Of The Rings).
+<LI>Fixed <CODE>SMULL/SMLAL</CODE> opcodes.
+<LI>VBlank interrupt now occurs with HBlank in line 160 (Robot Wars).
+<LI>Now recomputing sprites every time screen mode changes (Ice Age).
+<LI>Now setting unused <CODE>KEYSTAT</CODE> bits to zeroes (Defender Of The
+    Crown).
+<LI>Now updating <CODE>C</CODE> flag when immediate value is rotated
+    in an ALU operation (Desert Strike).
+</UL>
+<H2>New in Version 2.0</H2>
+<UL>
+<LI>Majorly redesigned screen rendering routines, making them faster.
+<LI>Added sprite sorting and precomputation to speed things up.
+<LI>Fixed window rendering.
+<LI>Fixed multiple screen rendering bugs.
+<LI>Color effects can now be disabled in WININ/WINOUT registers.
+<LI>Alpha blending can now be applied multiple times (Lord Of The Rings).
+<LI>Disabled alpha blending for pixels with no second argument (Lord Of
+    The Rings).
+<LI>Added window support to bitmapped screen modes.
+<LI>Disabled display of the first 512 sprite patterns in bitmapped
+    screen modes.
+<LI>Changed LDM instructions not to write back base register if it has
+    just been loaded from memory (Golden Sun 2, Kong, VRally 3, etc.).
+<LI>Now setting R12=0x04000000 in VBlankIntrWait() and IntrWait() (Bubble
+    Bobble Old And New).
+<LI>Added QOpARM() and WOpARM() functions for fast opcode fetching.
+<LI>Removed data rotation in unaligned 32bit writes (Downforce).
+<LI>Modified BIOS decoders that write to VRAM to use words, not bytes.
+<LI>Now returning correct "broken" values when program tries to read
+    BIOS area by bytes and 16bit words.
+<LI>Now doubling byte writes to VRAM and palette.
+<LI>Now mirroring VRAM as 64kB+2*32kB.
+<LI>Now mirroring SRAM, OAM, and palette.
+<LI>Removed mirroring of I/O addresses.
+<LI>Now waiting for sound thread to die in VGBA-Unix.
+</UL>
+<H2>New in Version 1.7</H2>
+<UL>
+<LI>Switched to the latest version of the OpenWatcom C/C++ compiler.
+<LI>The infamous Windows problem with spaces in directory names seems
+    to be fixed by using a newer compiler.
+<LI>Joystick problems in VGBA-Windows are fixed.
+<LI>Added joystick configuration to VGBA-Windows setup panel.
+<LI>Fixed sound in VGBA-Windows on Windows 2000.
+</UL>
+<H2>New in Version 1.6</H2>
+<UL>
+<LI><B>VGBA-MSDOS now comes with the VGBA-Windows!</B>
+<LI>Implemented BIOSChecksum() BIOS call (SWI#0D).
+<LI>Implemented BitUnpack() BIOS call (SWI#10).
+<LI>Implemented GetJumpList() BIOS call (SWI#2A).
+<LI>Added a -verbose bit to print sound-related messages.
+</UL>
+<H2>New in Version 1.5</H2>
+<UL>
+<LI>Added strict type/source checking to BIOS uncompression routines.
+<LI>Fixed direct sound to melodic sound volume ratio.
+<LI>Added optional waveforms to melodic (non-PCM) channels.
+<LI>Fixed updates to the melodic PCM channel.
+<LI>Fixed melodic volume sweep.
+<LI>Fixed a bug that broke timers when restoring saved state.
+<LI>Fixed a problem with prematurely closed stdin in VGBA-Unix.
+</UL>
+<H2>New in Version 1.4</H2>
+<UL>
+<LI><B>State save (.STA) file format has changed</B>!
+<LI>Improved direct sound emulation by tinkering with sound driver API.
+<LI>Added BIOS read-protection.
+<LI>Added support for different EEPROM sizes (<CODE>-eeprom</CODE>).
+    Some new GBA games use 16384x64 EEPROMs (use <CODE>-eeprom 14</CODE>
+    option with these games).
+<LI>Fixed disassembler to show LDRH/STRH operations with immediate
+    offset.
+<LI>Added support for LDRH/STRH operations with post-indexing and
+    write-back modes both "on". This is still <U>wrong</U>, folks.
+    Please, read the ARM7TDMI documentation and modify your assemblers
+    to generate correct opcodes.
+<LI>Now updating timer data registers with current counter values.
+<LI>Now clearing OAM and some other registers on reset.
+<LI>Now enabling interrupts in VBlankIntrWait() and IntrWait().
+<LI>Now ignoring compression type tags in RLUncompress() (Lego Racers 2).
+<LI>Fixed LDM/STM opcodes to handle USER mode R13/R14 load/save.
+<LI>Fixed mode changes in LDM opcode.
+<LI>Fixed DMA debugging message.
+<LI>Added more manufacturer IDs to the database.
+</UL>
+<H2>New in Version 1.3</H2>
+<UL>
+<LI>Added console-based <B>debugger</B> to the VGBA-Windows, by
+    public demand.
+<LI>Fixed MULL/SMULL opcode (thanks go to Santeri Paavolainen).
+<LI>Added forced VBlank emulation.
+<LI>Filled simulated BIOS area with the value that real copy-protected
+    BIOS returns on reads.
+<LI>Fixed EEPROM emulation a little bit.
+<LI>Made "channels active" sound register visible to the GBA.
+<LI>Added more manufacturer IDs to the database.
+<LI>Fixed rollover on the volume control button in VGBA-Windows.
+<LI>Fixed command line parsing in VGBA-Windows.
+<LI>Now turning off sound when VGBA-Windows dialog boxes get shown.
+<LI>VGBA-Windows now always uses .INI file in the same directory as
+    the .EXE file.
+</UL>
+<H2>New in Version 1.2</H2>
+<UL>
+<LI>Implemented direct sound channels.
+<LI>Added dual banks for the melodic sound channel #3.
+<LI>Added master volume for direct and melodic sound (SOUNDCNT_H).
+<LI>Added direct sound DMA interrupts (Pac-Man Collection).
+<LI>Added serial I/O interrupts (Golf Master).
+<LI>Added Diff8bitUnFilterWRAM(), Diff8bitUnFilterVRAM(), and
+    Diff16bitUnFilter() BIOS calls.
+<LI>Added more manufacturer IDs to the database.
+<LI>Disabled DMA restart (sound in Wario World 4, etc.).
+<LI>Fixed a bug that screwed up timers after DMA transfers.
+<LI>Fixed WRdARM() function and macro handling of unaligned reads.
+<LI>Fixed IntrWait() and VBlankIntrWait() BIOS calls (SWI #4,5).
+<LI>Fixed long-multiply instructions (Tony Hawk Pro Skater 2).
+<LI>Fixed ARM-mode SWIs (Super Black Bass Advance).
+<LI>Somewhat changed timings during uncompression BIOS calls.
+<LI>Changed simulated BIOS contents a little (Tactics Ogre).
+<LI>Set USER mode stack to correct value.
+<LI>Now initializing CPU into SYSTEM mode, no other flags.
+<LI>Changed default FlashID to a real one (was 0x0000).
+<LI>Fixed LDSH/LDSB THUMB mnemonics in the disassembler.
+<LI>Added ability to supply FlashID from command line in VGBA-Unix and
+    VGBA-MSDOS.
+<LI>Added GBA-specific calls to the GameBoy sound chip API.
+<LI>Changed SetWave() sound API call to use shared buffers, as needed
+    for direct sound.
+<LI>Implemented threaded Unix sound driver.
+<LI>Shrunk sound buffer size in the Windows sound driver to 256 bytes
+    for clearer sound.
+<LI>Changed master volume control usage in all sound drivers for more 
+    efficient and correct mixing.
+<LI>Updated documentation, fixing some HTML errors.
+</UL>
+<H2>New in Version 1.1</H2>
+<UL>
+<LI>Added support for rectangular and sprite windows.
+<LI>Added BgAffineSet() BIOS call.
+<LI>Added more manufacturer IDs to the database.
+<LI>Added support for GZIPped ROM images and state file.
+<LI>Improved fast QRdARM() macro to handle unaligned addresses (albeit
+    not ideally).
+<LI>Fixed alpha-blending operation a bit.
+<LI>Now saving serial EEPROM contents in the .SAV file, after the FlashROM
+    contents.
+<LI>Removed CRC check as it was wrong and did not make any sense.
+    Only CMP is checked now.
+<LI>Fixed sprite priorities relative to background priorities in screen
+    modes 0..2.
+<LI>Optimized drawing routines for rotated/scaled backgrounds and sprites.
+<LI>Now saving EEPROM state in state files (.STA format has changed).
+<LI>Fixed joystick support in VGBA-Windows (somewhat).
+<LI>Fixed VGBA-Unix to allow window managers (like WindowMaker) create
+    an application icon for it.
+</UL>
+<H2>New in Version 1.0</H2>
+<UL>
+<LI>VGBA-Windows is now available.
+    <A HREF="http://www.digibuy.com/cgi-bin/order.html?296825+99046733021">
+    Register it NOW!
+    </A>
+<LI>VGBA-Unix is now available.
+<LI>Added facility to save and load emulation state.
+<LI>Added serial EEPROM emulation.
+<LI>Implemented more or less accurate CPU cycle counting (still not
+    accurate enough though).
+<LI>Implemented HuffUncomp() call.
+<LI>Fixed ObjAffineSet(), CpuSet(), CpuFastSet(), and SoftReset() calls.
+<LI>Fixed timers to reload values correctly.
+<LI>Majorly updated documentation.
+<LI>Fixed background color problem in the non-VESA (256 color) version
+    of VGBA-MSDOS.
+</UL>
+<H2>New in Version 0.6</H2>
+<UL>
+<LI>Added JEDEC FlashROM support.
+<LI>Added CRC/CMP check. All failing cartridges will now be rejected
+    unless you use the <CODE>-nocrc</CODE> option.
+<LI>Implemented pending IRQ handling after IRQs were switched on.
+<LI>Disabled IRQs in the SVC mode.
+<LI>Added ObjAffineSet() BIOS call.
+<LI>Added Halt() and Stop() BIOS calls.
+<LI>Fixed several BIOS calls.
+<LI>Fixed a special case of DMA with the length of 0 items.
+<LI>Fixed LDR/STR/LDRB/STRB instruction display in the debugger.
+<LI>Improved cartridge information reporting.
+<LI>Added a lot of command line options.
+<LI>Added a lot of control keys.
+</UL>
+<H2>New in Version 0.5</H2>
+<UL>
+<LI>Moved dummy GBA.ROM contents inside the VGBA code.
+<LI>Added DMA3 start at the beginning of HRefresh.
+<LI>Added 'v' command to the debugger to show GBA status.
+<LI>Fixed transparency effects in bitmap modes.
+<LI>Fixed transparency with multiple backgrounds.
+<LI>Now initializing rotation/scaling properly.
+<LI>No longer supporting 128kB flash ROM above the cartridge ROM.
+</UL>
+<H2>New in Version 0.4</H2>
+<UL>
+<LI>Added MULL/MLAL ARM opcodes.
+<LI>Added color effects to all screen modes.
+<LI>Added rotation to all appropriate screen modes.
+<LI>Added rotation to sprites.
+<LI>Fixed DMA transfers to start correctly.
+<LI>Fixed DMA transfers to leave correct values in DMACONT registers.
+<LI>Added IRQ at the end of DMA transfer, if required.
+<LI>Fixed GB sound chip emulation.  
+<LI>Added CPUSet() and CPUFastSet() BIOS calls.
+<LI>Added RLUnCompWRAM() and RLUnCompVRAM() BIOS calls.
+<LI>Now saving cartridge SRAM and flash ROM into a .SAV file.
+<LI>Both 16bit color and 8bit color versions are included. 16bit version
+    requires VESA-compatible video card. I still recommend it over the
+    8bit version as GBA programs are extremely ugly in 256 colors :)
+</UL>
+
+<A NAME="LABM">
+<CENTER><H1>Thanks</H1></CENTER>
+</A>
+<P>
+I would like to thank people from the EFNet <I>#gbadev</I> IRC channel for
+their help locating GBA specifications and testing the emulator.
+</P>
+
+<HR>
+<I>
+&copy; Copyright by
+<A HREF="http://fms.komkon.org/">Marat Fayzullin</A>
+(marat [AT] komkon /DOT/ org)
+</I>
+</BODY>
+</HTML>

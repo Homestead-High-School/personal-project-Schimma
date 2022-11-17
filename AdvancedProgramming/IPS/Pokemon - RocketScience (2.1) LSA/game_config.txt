@@ -1,0 +1,6 @@
+# Pokemon - Rocket Science(LSA)
+game_name = ROCKETSIENCE
+game_code = PRSV
+vender_code = 01
+idle_loop_eliminate_target = 080008c6
+flash_rom_type = 128KB
